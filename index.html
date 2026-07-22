@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Binayak Poudel | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:#f7f9f7;color:#333}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08);z-index:1000}
+nav a{text-decoration:none;color:#2e7d32;margin-left:24px;font-weight:600}
+.logo{font:700 1.4rem Poppins}
+section{padding:90px 8%}
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:linear-gradient(120deg,#eef7ef,#fff);
+}
+
+.hero img{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    object-fit:cover;
+object-position:60% 05%;
+    border:6px solid #2e7d32;
+}
+h1,h2,h3{font-family:Poppins}
+h1{font-size:3rem}
+.accent{color:#2e7d32}
+.btn{display:inline-block;margin-top:20px;padding:12px 22px;background:#2e7d32;color:#fff;border-radius:30px;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 5px 18px rgba(0,0,0,.08);transition:.3s}
+.card:hover{transform:translateY(-6px)}
+.skills ul{list-style:none;margin-top:10px}
+.skills li{padding:4px 0}
+/* Resume */
+.resume-section{margin-top:55px}
+.timeline{border-left:2px solid #2e7d32;margin-left:12px;padding-left:28px}
+.resume-section h3{font-size:1.6rem;margin-bottom:20px;color:#333}
+.item{position:relative;padding-bottom:35px}
+.item:last-child{padding-bottom:0}
+.item:before{content:"";position:absolute;width:14px;height:14px;background:#fff;border:3px solid #2e7d32;border-radius:50%;left:-38px;top:5px}
+.item h4{color:#2e7d32;font-size:1.2rem;margin-bottom:8px}
+.item span{display:inline-block;background:#efefef;padding:5px 12px;border-radius:4px;margin-bottom:10px;font-weight:600}
+.item p{line-height:1.8}
+footer{text-align:center;padding:30px;background:#1b5e20;color:#fff}
+form input,form textarea{width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:8px}
+button{padding:12px 22px;border:none;background:#2e7d32;color:#fff;border-radius:30px}
+@media(max-width:800px){.hero{flex-direction:column-reverse;text-align:center;padding-top:120px}.hero img{margin-bottom:25px}}
+
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;flex-direction:column}
+.lightbox.show{display:flex}
+.lightbox img{max-width:90vw;max-height:80vh;transform:scale(1);transition:transform .2s;cursor:grab}
+.lb-controls{margin-top:10px;display:flex;gap:10px}
+.lb-controls button{padding:8px 12px}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="logo">Binayak Poudel</div>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#resume">Resume</a>
+<a href="#research">Research</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div>
+<h1>Hello, I'm <span class="accent">Binayak Poudel</span></h1>
+<h3 id="typing"></h3>
+<p style="margin-top:18px;max-width:620px">
+Forestry Graduate Passionate about Forest Carbon, Soil Science, GIS, Remote Sensing and Climate-smart Forest Management Research.
+</p>
+<a href="Binayak Poudel CV.pdf" class="btn">Download CV</a>
+</div>
+<img src="myphoto.jpg" alt="Profile" onclick="openLightbox(this.src)">
+</section>
+
+<section id="about">
+<h2>About</h2><br>
+<p>I am a Graduate of the <strong>Bachelor of Science in Forestry</strong> at <strong>Tribhuvan University</strong>, <strong>Institute of Forestry</strong>, with a strong academic background and volunteering experience. My academic journey and practical application have laid a strong foundation in <strong>GIS</strong>, <strong>spatial analysis</strong>, and <strong>statistical modeling</strong>, with strong analytical, communication, and teamwork abilities. Proficiency in analytical tools and programming environments such as <strong>R</strong> and <strong>Google Earth Engine </strong>enables me to analyze and interpret forest and environmental data for research and decision-making.</p>
+<br>
+<hr class="about-divider"> <br>
+   <p>
+        I aspire to build a research-oriented career in Forestry and Soil Science,
+        with particular interests in <strong>forest ecology</strong>, forest carbon dynamics, <strong>soil
+        ecology</strong>, sustainable forest management, forest ecosystem functioning,
+        ecological modeling, and advanced statistical analysis through laboratory,
+        field-based, GIS, and remote sensing techniques.
+    </p>
+<br><h2>Skills</h2><br>
+<div class="grid skills">
+<div class="card"><h3>Programming</h3><ul><li>R</li><li>C</li><li>HTML</li></ul></div>
+<div class="card"><h3>GIS & Remote Sensing</h3><ul><li>ArcGIS</li><li>QGIS</li><li>Google Earth Engine</li></ul></div>
+<div class="card"><h3>Research</h3><ul><li>Forest Inventory</li><li>Forest Carbon Quantification</li><li>Soil Sampling</li><li>Data Analysis</li></ul></div>
+<div class="card"><h3>Statistics</h3><ul><li>PCA</li><li>PERMANOVA</li><li>Regression Analysis</li><li>GLM</li></ul></div>
+</div>
+</section>
+
+<section id="resume">
+<h2>Resume</h2>
+<div class="resume-section"><h3>Education</h3><div class="timeline"><div class="item"><h4>Bachelor of Science in Forestry</h4><span>2021 – 2025</span><p>Tribhuvan University, Institute of Forestry, Pokhara, Nepal</p>
+
+<p> Thesis: <strong>"Assessing the Influence of Tree Vegetation Types and Environmental 
+Variables on Forest Carbon Stock in Kaski District, Mid-Hills Region of Nepal" </strong></p>
+<p> Class Projects: <li> Prepared of Community Forest Operational Plan of Deurali Community Forest, Lamjung</li></p><br>
+<p> <li> Developed a local volume table of trees presented in Institute of Forestry, Pokhara </li> </p><br>
+<p> <li> Measured Soil Properties such as soil bulk density, soil particle density, soil pH, soil moisture, soil organic matter content</li><p><br>
+<p> <li> Performed Ecological Analysis of Banpale Forest of Institute of Forestry, Pokhara</li> </p> <br>
+</div></div></div>
+
+<div class="resume-section"><h3>Research Experience</h3><div class="timeline"><div class="item"><h4>Lead Researcher</h4><p><li>Assessing the Influence of Tree Vegetation Types and Environmental Variables on Forest Carbon Stock in the Mid-Hills of Nepal - Hypothesis development, Research Design, Data collection using GPS and field inventory, Data Analysis using R, MS Excel and SPSS, and Report Writing </p> <br>
+<h4> Research Assistant </h4> <p> <li> Preparation of the “Madhesh 
+Province Human-Wildlife Co-existence Plan” - Data Collection using household questionnaire survey and trend analysis through SPSS and R.</li><br></p>
+<p><li> "Estimation of total carbon stock in Schima-Castanopsis forest: a case study from 
+Banpale Forest, Kaski" - Data collecton through field inventory, core method, and analysis of soil properties in Laboratory. </li></p><br>
+<p><li>  ‘Distribution, Nesting, Hibernation Sites, and Conservation Threats of Turtles in 
+Janakpur Sub-metropolitan City, Nepal’ - Field Data Collection  including taking pictures of the observed turtle species, GPS coordinates 
+of its location, habitat in which it was observed and creation of its Spatial Distribution Map. </li> </p> <br>
+</div></div></div>
+<div class="resume-section"><h3>Professional Experience</h3><div class="timeline"><div class="item"><h4>Supervisor</h4><span>Nepal Economic Census 2025, (Apr-Jun, 2026)</span>
+<br> 
+<p><li> Successfully guided the enumerator on how to collect data regarding the economic survey </li> <br>
+<li> Worked as a coordinator when any problem arrived on the field during the survey </li> <br>
+<li> Maintained a two-way communication connection with the enumerator and District Officer 
+during the survey. </li> <p><br>
+
+</div>
+<div class="item"><h4>Training and Certifications</h4>
+<br>
+<p> <li> Species Distribution Modeling using Google Earth Engine, Webinar by NASA ARSET. </li> </p> <br>
+<p> <li> Gender in Academia: Developing Institute of Forestry as a Gender Friendly Institution </li> </p> <br>
+<p> <li> Youth in Policy and Governance (YPG): Training Camp – I  </li> </p> <br>
+<p> <li>  Training on Wildlife Research and Scientific Writing, 2022 for 5 days by Society for Wildlife Research and Conservation - SOWREC, Nepal</li> </p> <br>
+</div>
+</div></div>
+<div class="resume-section"><h3>Publications</h3><div class="timeline"><div class="item"><h4>Discover Forest</h4><span>Under Review</span>
+</div>
+<p> <b> Poudel, B.</b>, Bhattarai, S., Koirala, S., Chapagain, J., and Timilsina, S. Carbon Storage in 
+Himalayan Community Forests Is Structure-Driven, Not Site-Driven </p> <br> 
+<div class="item"><h4>Banko Janakari</h4><span>Under Review</span></div>
+<p> Chapagain, J.,<b> Poudel, B.</b>, Bhattarai, S., Koirala, S., and Timilsina, S. Forest Carbon Stock 
+Quantification of Banpale Forest, Institute of Forestry, Kaski. </p> <br>
+</div></div>
+</section>
+
+
+<section id="research">
+<h2>Research</h2><br>
+
+<style>
+.research-item{background:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.08);margin-bottom:18px;overflow:hidden}
+.research-title{width:100%;padding:18px;text-align:left;font-size:1.1rem;font-weight:600;background:#2e7d32;color:#fff;border:none;cursor:pointer}
+.research-content{display:none;padding:20px}
+.research-slider{position:relative;max-width:550px;margin:0 auto 20px}.research-slider img{width:100%;height:320px;object-fit:contain;border-radius:10px;display:none}.research-slider img.active{display:block}.slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(46,125,50,.9);color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px}.slider-btn.prev{left:10px}.slider-btn.next{right:10px}
+.research-item.active .research-content{display:block}
+</style>
+
+<div class="research-item">
+<button class="research-title">Assessment of Human-Common Leopard Conflict (HLC) in Parbat
+
+District, Nepal</button>
+<div class="research-content">
+<img src="images/thesis-result.jpg" alt="Research Result" onclick="openLightbox(this.src)">
+<h4>Research Summary</h4><br>
+<p>This study assessed 
+the spatial and temporal patterns of HLC in Parbat district and evaluated the economic losses 
+associated with leopard-related incidents. Data were collected from Division Forest Office 
+records (2077-2081) and analyzed using descriptive statistics, chi-square tests, and linear 
+regression. Findings reveal that Kushma Municipality experiences the highest livestock 
+depredation, with most attacks occurring in winter and at night. Statistical analysis (χ²=32.48, 
+p<0.05) confirmed seasonal variations in depredation trends, and regression analysis (27.8x, 
+R² = 0.88) indicated an increasing trend. Economic losses from leopard attacks totaled Rs. 
+67,20,849, with only 44.16% of cases receiving compensation after a year, exacerbating 
+negative perceptions toward leopards. The study highlights the need for predator-proof corrals, 
+improved livestock insurance, and timely compensation to mitigate conflict and foster 
+coexistence. </p>
+
+</div></div>
+
+<div class="research-item">
+<button class="research-title"> Tree Carbon Storage in Himalayan Community Forests Is Structure-Driven, While Soil Carbon Storage Is Site-Driven</button>
+<div class="research-content">
+<div class="research-slider"><img src="binayak2.png" class="active" onclick="openLightbox(this.src)"><img src="binayak1.png" onclick="openLightbox(this.src)"><button class="slider-btn prev">&#10094;</button><button class="slider-btn next">&#10095;</button></div>
+<h4>Research Summary</h4> <br>
+<p>We quantified vegetation carbon and soil organic carbon (SOC) across three forest types¬; Shorea robusta, Pinus roxburghii, and mixed broadleaved forests — 
+using 19 nested circular plots (500 m²) and stratified soil sampling to 80 cm depth. Fourteen predictors representing stand structure, anthropogenic disturbance, 
+soil properties, topography, and climate were evaluated using correlation and PCA. Shorea robusta forests stored significantly higher vegetation carbon 
+(113.5 ± 7.1 Mg C ha⁻¹) and SOC (102.0 ± 2.3 Mg C ha⁻¹) than the other forest types. At the plot scale, basal area and canopy cover were the strongest positive 
+predictors of tree carbon, while anthropogenic disturbance exerted a negative effect with a correlation coefficient of -0.600. SOC was primarily regulated by soil
+ texture (positive with silt, negative with sand), with canopy cover as the only significant structural correlate. PCA confirmed that stand structure and disturbance 
+dominated vegetation carbon variation, whereas soil texture anchored SOC patterns. </p>
+</div></div>
+
+<div class="research-item">
+<button class="research-title">Estimation of Total Carbon Stock in Schima Castanopsis Forest: A Case Study From Banpale
+Forest, Kaski</button>
+<div class="research-content">
+<div class="research-slider"><img src="jenish1.png" class="active" onclick="openLightbox(this.src)"><img src="jenish3.jpg" onclick="openLightbox(this.src)"><button class="slider-btn prev">&#10094;</button><button class="slider-btn next">&#10095;</button></div>
+<h4>Research Summary</h4> <br>
+<p>This study quantified total carbon stock across
+five carbon pools: aboveground biomass, belowground biomass, litter, deadwood, and soil organic
+carbon (SOC) in the Banpale Schima–Castanopsis forest in Kaski district. A total of 15 randomly
+distributed plots were established following standard forest inventory protocols, and biomass was
+estimated using allometric equations. Soil samples were collected at three depth intervals (0–10 cm,
+10–20 cm, and 20–30 cm) to assess SOC variation. The results showed that total tree carbon stock was
+98.11 ± 6.45 Mg C ha⁻¹, with Schima wallichii and Castanopsis indica contributing the majority.
+Vegetation carbon (108.16 ± 6.54 Mg C ha⁻¹) exceeded soil organic carbon (36.07 ± 1.45 Mg C ha⁻¹),
+supporting the dominance of biomass carbon in this forest type.</p>
+</div></div>
+
+<br><h2>What's Next for Me?</h2><br>
+<p>I am currently looking for Research Assistantship / Teaching Assistantship opportunities to pursue my Master's degree. Furthermore, I want to pursue my further study in research based subject with research areas including
+ forest ecology, forest carbon dynamics, soil ecology, dendroecology, and fire ecology analysis through ecological modeling 
+techniques, and statistical data analysis using laboratory and remote sensing methods.</p>
+</section>
+
+
+<section id="contact">
+<h2>Contact</h2><br>
+<div class="grid">
+<div>
+<p><i class="fa-solid fa-envelope"></i> <a href="mailto:binayakpoudel1233@gmail.com"> G-mail </a></p>
+<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/binayak-poudel/" target="_blank"> LinkedIn </a></p>
+<p><i class="fab fa-github"></i> <a href="https://github.com/Binayak67/Binayak67" target="_blank"> GitHub </a> </p>
+<p><i class="fa-brands fa-orcid"></i> <a href="https://orcid.org/0009-0000-9512-2024" target="_blank"> ORCiD ID </a></p>
+</div>
+<form>
+<input placeholder="Name">
+<input placeholder="Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<footer>© 2026 Binayak Poudel | All rights reserved.</footer>
+
+
+<div id="lightbox" class="lightbox">
+<img id="lightboxImg" src="">
+<div class="lb-controls">
+<button onclick="zoomOut()">-</button>
+<button onclick="zoomIn()">+</button>
+<button onclick="resetZoom()">Reset</button>
+<button onclick="closeLightbox()">Close</button>
+</div></div>
+
+<script>
+const words=["Forestry Graduate","Forest Biometry Enthusiast","GIS & Remote Sensing Enthusiast","Aspiring Graduate Researcher"];
+let i=0,j=0,del=false;
+function type(){
+let t=words[i];
+document.getElementById("typing").textContent=t.substring(0,j);
+if(!del){j++;if(j>t.length){del=true;setTimeout(type,1200);return;}}
+else{j--;if(j<0){del=false;i=(i+1)%words.length;j=0;}}
+setTimeout(type,del?50:90);
+}
+type();
+document.querySelectorAll('.research-title').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('active'));
+
+document.querySelectorAll('.research-slider').forEach(slider=>{const images=slider.querySelectorAll('img');let index=0;function show(i){images.forEach(im=>im.classList.remove('active'));images[i].classList.add('active');}slider.querySelector('.next').onclick=()=>{index=(index+1)%images.length;show(index)};slider.querySelector('.prev').onclick=()=>{index=(index-1+images.length)%images.length;show(index)};});
+
+
+let currentScale=1;
+const lb=document.getElementById('lightbox');
+const lbImg=document.getElementById('lightboxImg');
+function applyZoom(){lbImg.style.transform='scale('+currentScale+')';}
+function openLightbox(src){lb.classList.add('show');lbImg.src=src;currentScale=1;applyZoom();}
+function closeLightbox(){lb.classList.remove('show');}
+function zoomIn(){currentScale=Math.min(currentScale+0.25,5);applyZoom();}
+function zoomOut(){currentScale=Math.max(currentScale-0.25,0.5);applyZoom();}
+function resetZoom(){currentScale=1;applyZoom();}
+lb.addEventListener('click',e=>{if(e.target===lb)closeLightbox();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
+</script>
+</body></html>
